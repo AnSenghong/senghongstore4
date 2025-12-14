@@ -2,7 +2,7 @@ const GamePayment = {
   BAKONG_CREATE: 'https://api.bakong-api.online/khqr/create',
   BAKONG_CHECK: 'https://api.bakong-api.online/check_by_md5',
   BAKONG_ID: 'ansenghong@aclb',
-  MERCHANT_NAME: 'Senghong STore',
+  MERCHANT_NAME: 'Senghong Store',
   
   TELEGRAM_BOT_TOKEN: '8499942561:AAEinTzwCiPuf1fho_f9v_gOxX72kOMjAgg',
   TELEGRAM_GROUPS: {
