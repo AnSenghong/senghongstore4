@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/api/telegram-notify", "destination": "/api/telegram-notify" }
+  ]
+}

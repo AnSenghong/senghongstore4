@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="km">
+
+<head>
+  <title>Roblox - Senghong Store</title>
+  <meta property="og:title" content="Roblox - Senghong Store" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <link rel="shortcut icon" href="public/senghong-logo.png" type="image/png" sizes="32x32" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@100;200;300;400;500;600;700;800;900&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="./product.css" />
+</head>
+
+<body>
+  <div class="page-container">
+    <header class="header">
+      <div class="header-left">
+        <a href="index.html" class="back-btn">
+          <i class="fas fa-arrow-left"></i>
+        </a>
+        <img alt="Senghong Store Logo" src="./public/senghong-logo.png" class="logo" />
+      </div>
+      <div class="header-right">
+        <button class="icon-btn menu-btn" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <div class="side-menu" id="sideMenu">
+      <div class="menu-header">
+        <img src="public/senghong-logo.png" alt="Logo" class="menu-logo" />
+        <span class="menu-title">Senghong Store</span>
+        <button class="close-menu" onclick="toggleMenu()"><i class="fas fa-times"></i></button>
+      </div>
+      <nav class="menu-nav">
+        <a href="index.html" class="menu-item"><i class="fas fa-home"></i> Home</a>
+        <a href="roblox.html" class="menu-item active"><i class="fas fa-gamepad"></i> Roblox</a>
+        <a href="terms.html" class="menu-item"><i class="fas fa-file-alt"></i> Terms & Conditions</a>
+        <a href="https://t.me/An_Senghong" target="_blank" class="menu-item"><i class="fab fa-telegram"></i> Telegram</a>
+      </nav>
+      <div class="menu-footer">
+        <p>Version 1.0</p>
+      </div>
+    </div>
+    <div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
+
+    <section class="product-banner">
+      <img src="public/banner1.jpg" alt="Roblox Banner" class="banner-image" />
+      <div class="banner-overlay">
+        <h1 class="banner-title">Roblox</h1>
+      </div>
+    </section>
+
+    <main class="main-content">
+      <div class="game-info-card">
+        <div class="game-icon-wrapper">
+          <img src="public/roblox.jpg" alt="Roblox" class="game-icon" />
+        </div>
+        <div class="game-details">
+          <h2 class="game-name">Roblox</h2>
+          <div class="game-features">
+            <div class="feature-item">
+              <i class="fas fa-check-circle"></i>
+              <span>សេវាកម្មប្រកបដោយសុវត្ថិភាព</span>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-clock"></i>
+              <span>24h ដំណើរការរហ័សរហួន</span>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-headset"></i>
+              <span>សេវាអតិថិជនគាំទ្រ</span>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-lock"></i>
+              <span>ត្រូវការ Username & Password</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-description">
+        <p>Roblox is an online game platform and game creation system. Play millions of games created by other players or create your own!</p>
+        <p class="warning-text"><i class="fas fa-exclamation-triangle"></i> សម្រាប់ Roblox យើងត្រូវការ Username និង Password របស់អ្នកដើម្បីបញ្ជូល Robux។ សូមប្តូរ Password បន្ទាប់ពីទទួលបាន Robux។</p>
+      </div>
+
+      <div class="verification-section">
+        <div class="section-header-box">
+          <span class="step-number">1</span>
+          <h3>បញ្ជូលព័ត៌មានគណនី</h3>
+        </div>
+
+        <div class="form-group">
+          <label for="username">Username <span class="required">*</span></label>
+          <input type="text" id="username" placeholder="Roblox Username" class="form-input" />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password <span class="required">*</span></label>
+          <input type="password" id="password" placeholder="Roblox Password" class="form-input" />
+          <button type="button" class="toggle-password" onclick="togglePassword()">
+            <i class="fas fa-eye" id="passwordToggleIcon"></i>
+          </button>
+        </div>
+
+        <div class="security-notice">
+          <i class="fas fa-shield-alt"></i>
+          <span>Your information is secure. We only use it to top up Robux.
+</span>
+        </div>
+      </div>
+
+      <div class="products-section">
+        <div class="section-header-box">
+          <span class="step-number">2</span>
+          <h3>ជ្រើសរើសកញ្ចប់</h3>
+        </div>
+        <p class="section-subtitle"><i class="fas fa-star" style="color: #ffc107;"></i> Recommended for You</p>
+
+        <h4 class="category-title">💰 Robux</h4>
+        <div class="products-grid">
+          <div class="product-card" onclick="selectProduct('80 Robux', 1.00, '80')">
+            <div class="product-image">
+              <img src="attached_assets/IMG_1984_1765711928647.PNG" alt="Robux" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">80 R$</span>
+              <span class="product-price">$1.00</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('160 Robux', 2.00, '160')">
+            <div class="product-image">
+              <img src="attached_assets/IMG_1984_1765711928647.PNG" alt="Robux" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">160 R$</span>
+              <span class="product-price">$2.00</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('240 Robux', 3.00, '240')">
+            <div class="product-image">
+              <img src="attached_assets/IMG_1984_1765711928647.PNG" alt="Robux" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">240 R$</span>
+              <span class="product-price">$3.00</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('320 Robux', 4.00, '320')">
+            <div class="product-image">
+              <img src="attached_assets/IMG_1984_1765711928647.PNG" alt="Robux" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">320 R$</span>
+              <span class="product-price">$4.00</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('400 Robux', 4.50, '400')">
+            <div class="product-image">
+              <img src="attached_assets/IMG_1984_1765711928647.PNG" alt="Robux" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">400 R$</span>
+              <span class="product-price">$4.50</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('800 Robux', 8.80, '800')">
+            <div class="product-image">
+              <img src="attached_assets/IMG_1984_1765711928647.PNG" alt="Robux" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">800 R$</span>
+              <span class="product-price">$8.80</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('1700 Robux', 17.40, '1700')">
+            <div class="product-image">
+              <img src="attached_assets/IMG_1984_1765711928647.PNG" alt="Robux" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">1700 R$</span>
+              <span class="product-price">$17.40</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('4500 Robux', 44.00, '4500')">
+            <div class="product-image">
+              <img src="attached_assets/IMG_1984_1765711928647.PNG" alt="Robux" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">4500 R$</span>
+              <span class="product-price">$44.00</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('10000 Robux', 85.50, '10000')">
+            <div class="product-image">
+              <img src="attached_assets/IMG_1984_1765711928647.PNG" alt="Robux" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">10000 R$</span>
+              <span class="product-price">$85.50</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="contact-section">
+          <span class="contact-label">Contact Us:</span>
+          <div class="contact-buttons">
+            <a href="https://t.me/An_Senghong" target="_blank" class="contact-btn telegram">
+              <i class="fab fa-telegram"></i>
+            </a>
+            <a href="https://www.facebook.com/share/1ZNJiurunr/?mibextid=wwXIfr" target="_blank" class="contact-btn facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+        <p class="copyright">Copyright 2025 <strong>Senghong Store</strong>. All Rights Reserved.</p>
+        <div class="payment-methods">
+          <span>We Accept:</span>
+          <span class="payment-badge khqr">KHQR</span>
+          <span class="payment-badge aba">ABA</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Payment Modal -->
+    <div class="payment-modal" id="paymentModal">
+      <div class="payment-modal-content">
+        <div class="modal-header">
+          <h3>ការទូទាត់</h3>
+          <button class="close-modal" onclick="closePaymentModal()"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="modal-body" id="modalBody">
+          <div class="order-summary">
+            <div class="order-row"><span class="order-label">Game:</span><span class="order-value" id="orderGame">Roblox</span></div>
+            <div class="order-row"><span class="order-label">Username:</span><span class="order-value" id="orderUsername">-</span></div>
+            <div class="order-row"><span class="order-label">Product:</span><span class="order-value" id="orderProduct">-</span></div>
+            <div class="order-row"><span class="order-label">Total:</span><span class="order-value total" id="orderTotal">$0.00</span></div>
+          </div>
+          <button class="pay-now-btn" onclick="processPayment()"><i class="fas fa-qrcode"></i> បង្កើត QR Code</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="game-payment.js"></script>
+  <script>
+    const GAME_NAME = 'Roblox';
+    let userInfo = null;
+    let selectedProduct = null;
+    let paymentTimer = null;
+    let timeLeft = 900;
+
+    function toggleMenu() {
+      const sideMenu = document.getElementById('sideMenu');
+      const menuOverlay = document.getElementById('menuOverlay');
+      sideMenu.classList.toggle('open');
+      menuOverlay.classList.toggle('open');
+      document.body.style.overflow = sideMenu.classList.contains('open') ? 'hidden' : '';
+    }
+
+    function togglePassword() {
+      const passwordInput = document.getElementById('password');
+      const toggleIcon = document.getElementById('passwordToggleIcon');
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        toggleIcon.className = 'fas fa-eye-slash';
+      } else {
+        passwordInput.type = 'password';
+        toggleIcon.className = 'fas fa-eye';
+      }
+    }
+
+    function validateForm() {
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value.trim();
+      if (!username || !password) { alert('សូមបញ្ចូល Username និង Password'); return false; }
+      userInfo = { username: username, password: password };
+      return true;
+    }
+
+    function selectProduct(name, price, code) {
+      if (!validateForm()) return;
+      selectedProduct = { name, price, code };
+      document.querySelectorAll('.product-card').forEach(c => c.classList.remove('selected'));
+      event.currentTarget.classList.add('selected');
+      showPaymentModal();
+    }
+
+    function showPaymentModal() {
+      document.getElementById('orderGame').textContent = GAME_NAME;
+      document.getElementById('orderUsername').textContent = userInfo.username;
+      document.getElementById('orderProduct').textContent = selectedProduct.name;
+      document.getElementById('orderTotal').textContent = '$' + selectedProduct.price.toFixed(2);
+      document.getElementById('paymentModal').classList.add('show');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closePaymentModal() {
+      document.getElementById('paymentModal').classList.remove('show');
+      document.body.style.overflow = '';
+      GamePayment.stopPaymentCheck();
+      if (paymentTimer) { clearInterval(paymentTimer); paymentTimer = null; }
+      resetModalBody();
+    }
+
+    function resetModalBody() {
+      document.getElementById('modalBody').innerHTML = `
+        <div class="order-summary">
+          <div class="order-row"><span class="order-label">Game:</span><span class="order-value" id="orderGame">${GAME_NAME}</span></div>
+          <div class="order-row"><span class="order-label">Username:</span><span class="order-value" id="orderUsername">${userInfo?.username || '-'}</span></div>
+          <div class="order-row"><span class="order-label">Product:</span><span class="order-value" id="orderProduct">${selectedProduct?.name || '-'}</span></div>
+          <div class="order-row"><span class="order-label">Total:</span><span class="order-value total" id="orderTotal">$${selectedProduct?.price?.toFixed(2) || '0.00'}</span></div>
+        </div>
+        <button class="pay-now-btn" onclick="processPayment()"><i class="fas fa-qrcode"></i> បង្កើត QR Code</button>
+      `;
+    }
+
+    async function processPayment() {
+      const btn = document.querySelector('.pay-now-btn');
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> កំពុងបង្កើត...';
+      btn.disabled = true;
+      try {
+        const orderInfo = { game: GAME_NAME, username: userInfo.username, password: userInfo.password, product: selectedProduct.name, productCode: selectedProduct.code, amount: selectedProduct.price.toFixed(2) };
+        const transaction = await GamePayment.createPayment(selectedProduct.price, orderInfo);
+        showQRCode(transaction);
+      } catch (error) {
+        alert('មានបញ្ហាក្នុងការបង្កើត QR Code។ សូមព្យាយាមម្តងទៀត។');
+        btn.innerHTML = '<i class="fas fa-qrcode"></i> បង្កើត QR Code';
+        btn.disabled = false;
+      }
+    }
+
+    function showQRCode(transaction) {
+      timeLeft = 900;
+      document.getElementById('modalBody').innerHTML = `
+        <div class="qr-section">
+          <img src="${transaction.qrUrl}" alt="QR Code" class="qr-image" />
+          <div class="timer-section"><i class="fas fa-clock"></i> <span id="timerDisplay">${GamePayment.formatTime(timeLeft)}</span></div>
+          <div class="checking-status"><i class="fas fa-spinner fa-spin"></i> <span>កំពុងរង់ចាំការទូទាត់...</span></div>
+        </div>
+      `;
+      paymentTimer = setInterval(() => {
+        timeLeft--;
+        document.getElementById('timerDisplay').textContent = GamePayment.formatTime(timeLeft);
+        if (timeLeft <= 0) { clearInterval(paymentTimer); closePaymentModal(); alert('QR Code បានផុតកំណត់។ សូមព្យាយាមម្តងទៀត។'); }
+      }, 1000);
+      GamePayment.startPaymentCheck((result) => { clearInterval(paymentTimer); showPaymentSuccess(); }, (error) => { console.error('Payment check error:', error); });
+    }
+
+    function showPaymentSuccess() {
+      const orderInfo = { game: GAME_NAME, username: userInfo.username, password: userInfo.password, product: selectedProduct.name, productCode: selectedProduct.code, amount: selectedProduct.price.toFixed(2) };
+      document.getElementById('modalBody').innerHTML = GamePayment.getSuccessPageHTML(orderInfo);
+      setTimeout(() => { closePaymentModal(); document.querySelectorAll('.product-card').forEach(c => c.classList.remove('selected')); selectedProduct = null; }, 8000);
+    }
+  </script>
+</body>
+</html>

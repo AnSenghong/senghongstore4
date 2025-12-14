@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="km">
+
+<head>
+  <title>Senghong Store - Game Top Up</title>
+  <meta property="og:title" content="Senghong Store - Game Top Up" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <link rel="shortcut icon" href="public/senghong-logo.png" type="image/png" sizes="32x32" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@100;200;300;400;500;600;700;800;900&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="./homepage.css" />
+</head>
+
+<body>
+  <div class="page-container">
+    <header class="header">
+      <div class="header-left">
+        <img alt="Senghong Store Logo" src="./public/senghong-logo.png" class="logo" />
+      </div>
+      <div class="header-right">
+        <button class="icon-btn" onclick="toggleSearch()">
+          <i class="fas fa-search"></i>
+        </button>
+        <button class="icon-btn cambodia-flag">
+          <img src="public/cambodia-flag-400h.webp" alt="Cambodia" />
+        </button>
+        <button class="icon-btn menu-btn" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <div class="search-container" id="searchContainer" style="display: none;">
+      <input type="text" placeholder="Search games..." class="search-input" id="searchInput" />
+    </div>
+
+    <!-- Side Menu -->
+    <div class="side-menu" id="sideMenu">
+      <div class="menu-header">
+        <img src="public/senghong-logo.png" alt="Logo" class="menu-logo" />
+        <span class="menu-title">Senghong Store</span>
+        <button class="close-menu" onclick="toggleMenu()"><i class="fas fa-times"></i></button>
+      </div>
+      <nav class="menu-nav">
+        <a href="index.html" class="menu-item active"><i class="fas fa-home"></i> Home</a>
+        <a href="mlbb.html" class="menu-item"><i class="fas fa-gamepad"></i> Mobile Legends</a>
+        <a href="terms.html" class="menu-item"><i class="fas fa-file-alt"></i> Terms & Conditions</a>
+        <a href="https://t.me/An_Senghong" target="_blank" class="menu-item"><i class="fab fa-telegram"></i> Telegram</a>
+        <a href="https://www.facebook.com/share/1ZNJiurunr/?mibextid=wwXIfr" target="_blank" class="menu-item"><i class="fab fa-facebook"></i> Facebook</a>
+      </nav>
+      <div class="menu-footer">
+        <p>Version 1.0</p>
+      </div>
+    </div>
+    <div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
+
+    <!-- Banner Slider -->
+    <section class="banner-section">
+      <div class="banner-slider" id="bannerSlider">
+        <img src="public/banner1.jpg" alt="Banner 1" class="banner-img active" />
+        <img src="public/banner2.jpg" alt="Banner 2" class="banner-img" />
+      </div>
+      <div class="banner-dots">
+        <span class="dot active" onclick="goToSlide(0)"></span>
+        <span class="dot" onclick="goToSlide(1)"></span>
+      </div>
+    </section>
+
+    <section class="popular-section">
+      <h2 class="section-title"><i class="fas fa-fire"></i> POPULAR!</h2>
+      <p class="section-subtitle">Some of the most popular selected products today.</p>
+      
+      <div class="popular-list">
+        <a href="mlbb.html" class="popular-item">
+          <img src="https://lysaa.b-cdn.net/1747984921531.png" alt="Mobile Legends" class="popular-img" />
+          <div class="popular-info">
+            <span class="popular-name">Mobile Legends</span>
+            <span class="popular-dev">Moonton</span>
+          </div>
+        </a>
+        <a href="freefire.html" class="popular-item">
+          <img src="https://webstorages.sgp1.digitaloceanspaces.com/web/01K0BWPP3X7Y05WBXGR0NXXQEC.jpeg" alt="Free Fire" class="popular-img" />
+          <div class="popular-info">
+            <span class="popular-name">Free Fire</span>
+            <span class="popular-dev">Garena</span>
+          </div>
+        </a>
+        <a href="bloodstrike.html" class="popular-item">
+          <img src="public/blood-strike.jpg" alt="Blood Strike" class="popular-img" />
+          <div class="popular-info">
+            <span class="popular-name">Blood Strike</span>
+            <span class="popular-dev">NetEase</span>
+          </div>
+        </a>
+        <a href="genshin.html" class="popular-item">
+          <img src="public/genshin-impact.jpg" alt="Genshin Impact" class="popular-img" />
+          <div class="popular-info">
+            <span class="popular-name">Genshin Impact</span>
+            <span class="popular-dev">MiHoYo</span>
+          </div>
+        </a>
+        <a href="roblox.html" class="popular-item">
+          <img src="public/roblox.jpg" alt="Roblox" class="popular-img" />
+          <div class="popular-info">
+            <span class="popular-name">Roblox</span>
+            <span class="popular-dev">Roblox Corporation</span>
+          </div>
+        </a>
+        <a href="zepeto.html" class="popular-item">
+          <img src="https://lysaa.b-cdn.net/1736870059407.png" alt="Zepeto" class="popular-img" />
+          <div class="popular-info">
+            <span class="popular-name">Zepeto</span>
+            <span class="popular-dev">Naver Z</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="topup-games-section">
+      <div class="section-header">
+        <button class="nav-arrow"><i class="fas fa-chevron-left"></i></button>
+        <h2 class="section-title-box">Top Up Games</h2>
+        <button class="nav-arrow"><i class="fas fa-chevron-right"></i></button>
+      </div>
+      
+      <div class="games-grid">
+        <a href="mlbb.html" class="game-card">
+          <div class="game-image-wrapper">
+            <img src="https://lysaa.b-cdn.net/1747984921531.png" alt="Mobile Legends" />
+          </div>
+          <div class="game-info">
+            <h4>Mobile Lege...</h4>
+            <span class="game-dev">Moonton</span>
+          </div>
+        </a>
+        <a href="freefire.html" class="game-card">
+          <div class="game-image-wrapper">
+            <img src="https://webstorages.sgp1.digitaloceanspaces.com/web/01K0BWPP3X7Y05WBXGR0NXXQEC.jpeg" alt="Free Fire" />
+          </div>
+          <div class="game-info">
+            <h4>Free Fire</h4>
+            <span class="game-dev">Garena</span>
+          </div>
+        </a>
+        <a href="bloodstrike.html" class="game-card">
+          <div class="game-image-wrapper">
+            <img src="public/blood-strike.jpg" alt="Blood Strike" />
+          </div>
+          <div class="game-info">
+            <h4>Blood Strike</h4>
+            <span class="game-dev">NetEase</span>
+          </div>
+        </a>
+        <a href="genshin.html" class="game-card">
+          <div class="game-image-wrapper">
+            <img src="public/genshin-impact.jpg" alt="Genshin Impact" />
+          </div>
+          <div class="game-info">
+            <h4>Genshin Imp...</h4>
+            <span class="game-dev">MiHoYo</span>
+          </div>
+        </a>
+        <a href="roblox.html" class="game-card">
+          <div class="game-image-wrapper">
+            <img src="public/roblox.jpg" alt="Roblox" />
+          </div>
+          <div class="game-info">
+            <h4>Roblox</h4>
+            <span class="game-dev">Roblox Corporation</span>
+          </div>
+        </a>
+        <a href="zepeto.html" class="game-card">
+          <div class="game-image-wrapper">
+            <img src="https://lysaa.b-cdn.net/1736870059407.png" alt="Zepeto" />
+          </div>
+          <div class="game-info">
+            <h4>Zepeto</h4>
+            <span class="game-dev">Naver Z</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="features-section">
+      <div class="mascot-container">
+        <img src="./public/senghong-logo.png" alt="Senghong Store Mascot" class="mascot" />
+      </div>
+      <h2 class="features-title">ហេតុអ្វីត្រូវជ្រើសរើស Senghong Store</h2>
+      <p class="features-subtitle">សម្រាប់ការបញ្ជូលពេជ្រហ្គេម?</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon blue">
+            <i class="fas fa-gem"></i>
+          </div>
+          <div class="feature-content">
+            <h4>តម្លៃសមរម្យ</h4>
+            <p>ផ្តល់ជូនតម្លៃល្អ សមរម្យ និងអាចទុកចិត្តបាន ជាមួយសេវាកម្មដែលមានគុណភាពខ្ពស់។</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon purple">
+            <i class="fas fa-credit-card"></i>
+          </div>
+          <div class="feature-content">
+            <h4>ងាយស្រួលទូទាត់ប្រាក់</h4>
+            <p>អាចទូទាត់ប្រាក់បានយ៉ាងងាយស្រួល តាមរយៈ KHQR, Wing, ABA, ACLEDA...</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon orange">
+            <i class="fas fa-headset"></i>
+          </div>
+          <div class="feature-content">
+            <h4>ការគាំទ្រអតិថិជន 24/7</h4>
+            <p>សេវាកម្មមានសុវត្ថិភាពខ្ពស់ ការបញ្ជូលពេជ្ររហ័ស និងធានាថាគណនីហ្គេមរបស់អ្នកមានសុវត្ថិភាព ១០០%។</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon green">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <div class="feature-content">
+            <h4>សុវត្ថិភាព & ទំនុកចិត្ត</h4>
+            <p>មានក្រុមការងារគាំទ្រអតិថិជនរបស់យើងរង់ចាំជួយអ្នកគ្រប់ពេល។</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="contact-section">
+          <span class="contact-label">Contact Us:</span>
+          <div class="contact-buttons">
+            <a href="https://t.me/An_Senghong" target="_blank" class="contact-btn telegram">
+              <i class="fab fa-telegram"></i>
+            </a>
+            <a href="https://www.facebook.com/share/1ZNJiurunr/?mibextid=wwXIfr" target="_blank" class="contact-btn facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <span class="divider">|</span>
+          <a href="terms.html">Terms & Conditions</a>
+        </div>
+        <p class="copyright">Copyright 2025 <strong>Senghong Store</strong>. All Rights Reserved.</p>
+        <div class="payment-methods">
+          <span>We Accept:</span>
+          <span class="payment-badge khqr">KHQR</span>
+          <span class="payment-badge aba">ABA</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    let currentSlide = 0;
+    const bannerImgs = document.querySelectorAll('.banner-img');
+    const dots = document.querySelectorAll('.dot');
+
+    function showSlide(index) {
+      bannerImgs.forEach((img, i) => {
+        img.classList.remove('active');
+        dots[i].classList.remove('active');
+      });
+      bannerImgs[index].classList.add('active');
+      dots[index].classList.add('active');
+      currentSlide = index;
+    }
+
+    function goToSlide(index) {
+      showSlide(index);
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % bannerImgs.length;
+      showSlide(currentSlide);
+    }
+
+    setInterval(nextSlide, 4000);
+
+    function toggleSearch() {
+      const searchContainer = document.getElementById('searchContainer');
+      if (searchContainer.style.display === 'none') {
+        searchContainer.style.display = 'block';
+        document.getElementById('searchInput').focus();
+      } else {
+        searchContainer.style.display = 'none';
+      }
+    }
+
+    function toggleMenu() {
+      const sideMenu = document.getElementById('sideMenu');
+      const menuOverlay = document.getElementById('menuOverlay');
+      sideMenu.classList.toggle('open');
+      menuOverlay.classList.toggle('open');
+      document.body.style.overflow = sideMenu.classList.contains('open') ? 'hidden' : '';
+    }
+
+    document.getElementById('searchInput').addEventListener('input', function(e) {
+      const searchTerm = e.target.value.toLowerCase();
+      const popularItems = document.querySelectorAll('.popular-item');
+      const gameCards = document.querySelectorAll('.game-card');
+      
+      popularItems.forEach(item => {
+        const name = item.querySelector('.popular-name').textContent.toLowerCase();
+        item.style.display = name.includes(searchTerm) ? 'flex' : 'none';
+      });
+      
+      gameCards.forEach(card => {
+        const name = card.querySelector('h4').textContent.toLowerCase();
+        card.style.display = name.includes(searchTerm) ? 'block' : 'none';
+      });
+    });
+  </script>
+</body>
+
+</html>

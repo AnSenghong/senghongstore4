@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="km">
+
+<head>
+  <title>Mobile Legends - Senghong Store</title>
+  <meta property="og:title" content="Mobile Legends - Senghong Store" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <link rel="shortcut icon" href="public/senghong-logo.png" type="image/png" sizes="32x32" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@100;200;300;400;500;600;700;800;900&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="./product.css" />
+</head>
+
+<body>
+  <div class="page-container">
+    <header class="header">
+      <div class="header-left">
+        <a href="index.html" class="back-btn">
+          <i class="fas fa-arrow-left"></i>
+        </a>
+        <img alt="Senghong Store Logo" src="./public/senghong-logo.png" class="logo" />
+      </div>
+      <div class="header-right">
+        <button class="icon-btn menu-btn" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Side Menu -->
+    <div class="side-menu" id="sideMenu">
+      <div class="menu-header">
+        <img src="public/senghong-logo.png" alt="Logo" class="menu-logo" />
+        <span class="menu-title">Senghong Store</span>
+        <button class="close-menu" onclick="toggleMenu()"><i class="fas fa-times"></i></button>
+      </div>
+      <nav class="menu-nav">
+        <a href="index.html" class="menu-item"><i class="fas fa-home"></i> Home</a>
+        <a href="mlbb.html" class="menu-item active"><i class="fas fa-gamepad"></i> Mobile Legends</a>
+        <a href="terms.html" class="menu-item"><i class="fas fa-file-alt"></i> Terms & Conditions</a>
+        <a href="https://t.me/An_Senghong" target="_blank" class="menu-item"><i class="fab fa-telegram"></i> Telegram</a>
+        <a href="https://www.facebook.com/share/1ZNJiurunr/?mibextid=wwXIfr" target="_blank" class="menu-item"><i class="fab fa-facebook"></i> Facebook</a>
+      </nav>
+      <div class="menu-footer">
+        <p>Version 1.0</p>
+      </div>
+    </div>
+    <div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
+
+    <!-- Banner -->
+    <section class="product-banner">
+      <img src="public/banner1.jpg" alt="Mobile Legends Banner" class="banner-image" />
+      <div class="banner-overlay">
+        <h1 class="banner-title">Mobile Legends</h1>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Game Info Card -->
+      <div class="game-info-card">
+        <div class="game-icon-wrapper">
+          <img src="https://lysaa.b-cdn.net/1747984921531.png" alt="Mobile Legends" class="game-icon" />
+        </div>
+        <div class="game-details">
+          <h2 class="game-name">Mobile Legends</h2>
+          <div class="game-features">
+            <div class="feature-item">
+              <i class="fas fa-check-circle"></i>
+              <span>សេវាកម្មប្រកបដោយសុវត្ថិភាព</span>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-clock"></i>
+              <span>24h ដំណើរការរហ័សរហួន</span>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-headset"></i>
+              <span>សេវាអតិថិជនគាំទ្រ</span>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-ban"></i>
+              <span>មិនទទួលបញ្ជូលពេជ្រ regions PH, ID, MY</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game Description -->
+      <div class="game-description">
+        <p>Mobile Legends: Bang Bang, 2017's brand new mobile eSports masterpiece. Shatter your opponents with the touch of your finger and claim the crown of the strongest Challenger!</p>
+        <p>Join your friends in Mobile Legends: Bang Bang, the brand new 5v5 MOBA showdown, and fight against real players! Choose your favorite heroes and build the perfect team with your comrades-in-arms! 10-second matchmaking, 10-minute battles.</p>
+      </div>
+
+      <!-- ID Verification Section -->
+      <div class="verification-section">
+        <div class="section-header-box">
+          <span class="step-number">1</span>
+          <h3>បញ្ជូលលេខអាយឌី</h3>
+          <button class="info-btn" onclick="showIdInfo()">
+            <i class="fas fa-question-circle"></i>
+          </button>
+        </div>
+
+        <div class="form-group">
+          <label for="userId">User ID <span class="required">*</span></label>
+          <input type="text" id="userId" placeholder="User ID" class="form-input" />
+        </div>
+
+        <div class="form-group">
+          <label for="zoneId">Zone ID <span class="required">*</span></label>
+          <input type="text" id="zoneId" placeholder="Zone ID" class="form-input" />
+        </div>
+
+        <button class="check-btn" onclick="checkUserId()">
+          <i class="fas fa-search"></i>
+          Check User ID
+        </button>
+
+        <!-- Verification Result -->
+        <div class="verification-result" id="verificationResult" style="display: none;">
+          <div class="result-content">
+            <div class="result-icon" id="resultIcon">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="result-info">
+              <span class="result-label">Username:</span>
+              <span class="result-value" id="resultUsername">-</span>
+            </div>
+            <div class="result-info">
+              <span class="result-label">Region:</span>
+              <span class="result-value" id="resultRegion">-</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Error Message -->
+        <div class="error-message" id="errorMessage" style="display: none;">
+          <i class="fas fa-exclamation-triangle"></i>
+          <span id="errorText">Error message here</span>
+        </div>
+      </div>
+
+      <!-- Products Section -->
+      <div class="products-section">
+        <div class="section-header-box">
+          <span class="step-number">2</span>
+          <h3>ជ្រើសរើសកញ្ចប់</h3>
+        </div>
+        <p class="section-subtitle"><i class="fas fa-star" style="color: #ffc107;"></i> Recommended for You</p>
+
+        <h4 class="category-title">Diamonds</h4>
+        <div class="products-grid" id="productsGrid">
+          <div class="product-card" onclick="selectProduct('55 Diamonds', 0.73, '55')">
+            <div class="product-image">
+              <img src="public/mlbb-diamond.png" alt="Diamonds" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">55</span>
+              <span class="product-price">$0.73</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('86 Diamonds', 1.16, '86')">
+            <div class="product-image">
+              <img src="public/mlbb-diamond.png" alt="Diamonds" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">86</span>
+              <span class="product-price">$1.16</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('165 Diamonds', 2.20, '165')">
+            <div class="product-image">
+              <img src="public/mlbb-diamond.png" alt="Diamonds" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">165</span>
+              <span class="product-price">$2.20</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('172 Diamonds', 2.29, '172')">
+            <div class="product-image">
+              <img src="public/mlbb-diamond.png" alt="Diamonds" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">172</span>
+              <span class="product-price">$2.29</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('257 Diamonds', 3.34, '257')">
+            <div class="product-image">
+              <img src="public/mlbb-diamond.png" alt="Diamonds" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">257</span>
+              <span class="product-price">$3.34</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('275 Diamonds', 3.53, '275')">
+            <div class="product-image">
+              <img src="public/mlbb-diamond.png" alt="Diamonds" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">275</span>
+              <span class="product-price">$3.53</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('343 Diamonds', 4.49, '343')">
+            <div class="product-image">
+              <img src="public/mlbb-diamond.png" alt="Diamonds" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">343</span>
+              <span class="product-price">$4.49</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('429 Diamonds', 5.63, '429')">
+            <div class="product-image">
+              <img src="public/mlbb-diamond.png" alt="Diamonds" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">429</span>
+              <span class="product-price">$5.63</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('514 Diamonds', 6.67, '514')">
+            <div class="product-image">
+              <img src="public/mlbb-diamond.png" alt="Diamonds" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">514</span>
+              <span class="product-price">$6.67</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('565 Diamonds', 7.24, '565')">
+            <div class="product-image">
+              <img src="public/mlbb-diamond.png" alt="Diamonds" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">565</span>
+              <span class="product-price">$7.24</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('600 Diamonds', 7.83, '600')">
+            <div class="product-image">
+              <img src="public/mlbb-diamond.png" alt="Diamonds" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">600</span>
+              <span class="product-price">$7.83</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('706 Diamonds', 9.02, '706')">
+            <div class="product-image">
+              <img src="public/mlbb-diamond.png" alt="Diamonds" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">706</span>
+              <span class="product-price">$9.02</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('792 Diamonds', 10.18, '792')">
+            <div class="product-image">
+              <img src="public/mlbb-diamond.png" alt="Diamonds" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">792</span>
+              <span class="product-price">$10.18</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('878 Diamonds', 11.32, '878')">
+            <div class="product-image">
+              <img src="public/mlbb-diamond.png" alt="Diamonds" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">878</span>
+              <span class="product-price">$11.32</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('963 Diamonds', 12.36, '963')">
+            <div class="product-image">
+              <img src="public/mlbb-diamond.png" alt="Diamonds" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">963</span>
+              <span class="product-price">$12.36</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('1049 Diamonds', 13.52, '1049')">
+            <div class="product-image">
+              <img src="public/mlbb-diamond.png" alt="Diamonds" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">1049</span>
+              <span class="product-price">$13.52</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('1135 Diamonds', 14.65, '1135')">
+            <div class="product-image">
+              <img src="public/mlbb-diamond.png" alt="Diamonds" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">1135</span>
+              <span class="product-price">$14.65</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('1220 Diamonds', 15.70, '1220')">
+            <div class="product-image">
+              <img src="public/mlbb-diamond.png" alt="Diamonds" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">1220</span>
+              <span class="product-price">$15.70</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('1412 Diamonds', 18.05, '1412')">
+            <div class="product-image">
+              <img src="public/mlbb-diamond.png" alt="Diamonds" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">1412</span>
+              <span class="product-price">$18.05</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('1584 Diamonds', 20.34, '1584')">
+            <div class="product-image">
+              <img src="public/mlbb-diamond.png" alt="Diamonds" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">1584</span>
+              <span class="product-price">$20.34</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('1755 Diamonds', 22.54, '1755')">
+            <div class="product-image">
+              <img src="public/mlbb-diamond.png" alt="Diamonds" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">1755</span>
+              <span class="product-price">$22.54</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('2195 Diamonds', 27.32, '2195')">
+            <div class="product-image">
+              <img src="public/mlbb-diamond.png" alt="Diamonds" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">2195</span>
+              <span class="product-price">$27.32</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('2901 Diamonds', 36.47, '2901')">
+            <div class="product-image">
+              <img src="public/mlbb-diamond.png" alt="Diamonds" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">2901</span>
+              <span class="product-price">$36.47</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('3688 Diamonds', 45.57, '3688')">
+            <div class="product-image">
+              <img src="public/mlbb-diamond.png" alt="Diamonds" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">3688</span>
+              <span class="product-price">$45.57</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('4390 Diamonds', 54.63, '4390')">
+            <div class="product-image">
+              <img src="public/mlbb-diamond.png" alt="Diamonds" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">4390</span>
+              <span class="product-price">$54.63</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('5532 Diamonds', 68.81, '5532')">
+            <div class="product-image">
+              <img src="public/mlbb-diamond.png" alt="Diamonds" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">5532</span>
+              <span class="product-price">$68.81</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('9288 Diamonds', 114.29, '9288')">
+            <div class="product-image">
+              <img src="public/mlbb-diamond.png" alt="Diamonds" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">9288</span>
+              <span class="product-price">$114.29</span>
+            </div>
+          </div>
+        </div>
+
+        <h4 class="category-title">Weekly Pass</h4>
+        <div class="products-grid">
+          <div class="product-card" onclick="selectProduct('Weekly Pass x1', 1.42, 'wkp')">
+            <div class="product-image">
+              <img src="public/weekly_f40c8a7fbc-200h.webp" alt="Weekly Pass" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">WKP x1</span>
+              <span class="product-price">$1.42</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('Weekly Pass x2', 2.84, 'wkp2')">
+            <div class="product-image">
+              <img src="public/weekly_f40c8a7fbc-200h.webp" alt="Weekly Pass" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">WKP x2</span>
+              <span class="product-price">$2.84</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('Weekly Pass x3', 4.26, 'wkp3')">
+            <div class="product-image">
+              <img src="public/weekly_f40c8a7fbc-200h.webp" alt="Weekly Pass" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">WKP x3</span>
+              <span class="product-price">$4.26</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('Weekly Pass x4', 5.68, 'wkp4')">
+            <div class="product-image">
+              <img src="public/weekly_f40c8a7fbc-200h.webp" alt="Weekly Pass" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">WKP x4</span>
+              <span class="product-price">$5.68</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('Weekly Pass x5', 7.10, 'wkp5')">
+            <div class="product-image">
+              <img src="public/weekly_f40c8a7fbc-200h.webp" alt="Weekly Pass" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">WKP x5</span>
+              <span class="product-price">$7.10</span>
+            </div>
+          </div>
+          <div class="product-card" onclick="selectProduct('Weekly Pass x10', 14.20, 'wkp10')">
+            <div class="product-image">
+              <img src="public/weekly_f40c8a7fbc-200h.webp" alt="Weekly Pass" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">WKP x10</span>
+              <span class="product-price">$14.20</span>
+            </div>
+          </div>
+        </div>
+
+        <h4 class="category-title">Special</h4>
+        <div class="products-grid">
+          <div class="product-card" onclick="selectProduct('Twilight Pass', 7.57, 'Twilight')">
+            <div class="product-image">
+              <img src="public/starlight_e282cafca1-200h.webp" alt="Twilight Pass" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">Twilight Pass</span>
+              <span class="product-price">$7.57</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="contact-section">
+          <span class="contact-label">Contact Us:</span>
+          <div class="contact-buttons">
+            <a href="https://t.me/An_Senghong" target="_blank" class="contact-btn telegram">
+              <i class="fab fa-telegram"></i>
+            </a>
+            <a href="https://www.facebook.com/share/1ZNJiurunr/?mibextid=wwXIfr" target="_blank" class="contact-btn facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <span class="divider">|</span>
+          <a href="terms.html">Terms & Conditions</a>
+        </div>
+        <p class="copyright">Copyright 2025 <strong>Senghong Store</strong>. All Rights Reserved.</p>
+        <div class="payment-methods">
+          <span>We Accept:</span>
+          <span class="payment-badge khqr">KHQR</span>
+          <span class="payment-badge aba">ABA</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Payment Modal -->
+    <div class="payment-modal" id="paymentModal">
+      <div class="payment-modal-content">
+        <div class="modal-header">
+          <h3>ការទូទាត់</h3>
+          <button class="close-modal" onclick="closePaymentModal()"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="modal-body" id="modalBody">
+          <div class="order-summary">
+            <div class="order-row">
+              <span class="order-label">Game:</span>
+              <span class="order-value" id="orderGame">Mobile Legends</span>
+            </div>
+            <div class="order-row">
+              <span class="order-label">User ID:</span>
+              <span class="order-value" id="orderUserId">-</span>
+            </div>
+            <div class="order-row">
+              <span class="order-label">Zone ID:</span>
+              <span class="order-value" id="orderZoneId">-</span>
+            </div>
+            <div class="order-row">
+              <span class="order-label">Product:</span>
+              <span class="order-value" id="orderProduct">-</span>
+            </div>
+            <div class="order-row">
+              <span class="order-label">Total:</span>
+              <span class="order-value total" id="orderTotal">$0.00</span>
+            </div>
+          </div>
+          <button class="pay-now-btn" onclick="processPayment()">
+            <i class="fas fa-qrcode"></i>
+            បង្កើត QR Code
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="game-payment.js"></script>
+  <script>
+    const API_BASE = 'https://v1.camrapidx.com/validate_user/';
+    const BLOCKED_REGIONS = ['PH', 'ID', 'MY'];
+    const GAME_NAME = 'Mobile Legends';
+    let verifiedUser = null;
+
+    function toggleMenu() {
+      const sideMenu = document.getElementById('sideMenu');
+      const menuOverlay = document.getElementById('menuOverlay');
+      sideMenu.classList.toggle('open');
+      menuOverlay.classList.toggle('open');
+      document.body.style.overflow = sideMenu.classList.contains('open') ? 'hidden' : '';
+    }
+
+    function showIdInfo() {
+      alert('របៀបស្វែងរកលេខ User ID និង Zone ID:\n\n1. បើកហ្គេម Mobile Legends\n2. ចុចលើរូបភាព Profile របស់អ្នក\n3. លេខ ID និង Zone ID នឹងបង្ហាញនៅក្រោមឈ្មោះអ្នក');
+    }
+
+    async function checkUserId() {
+      const userId = document.getElementById('userId').value.trim();
+      const zoneId = document.getElementById('zoneId').value.trim();
+      const resultDiv = document.getElementById('verificationResult');
+      const errorDiv = document.getElementById('errorMessage');
+
+      resultDiv.style.display = 'none';
+      errorDiv.style.display = 'none';
+      verifiedUser = null;
+
+      if (!userId || !zoneId) {
+        showError('សូមបញ្ចូល User ID និង Zone ID');
+        return;
+      }
+
+      const checkBtn = document.querySelector('.check-btn');
+      checkBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Checking...';
+      checkBtn.disabled = true;
+
+      try {
+        const response = await fetch(`${API_BASE}Mobile_Legends_KH.php?UserID=${encodeURIComponent(userId)}&ZoneID=${encodeURIComponent(zoneId)}`);
+        const data = await response.json();
+
+        if (data.status === 'APPROVED') {
+          if (BLOCKED_REGIONS.includes(data.region)) {
+            showError(`សូមអភ័យទោស! region ${data.region} មិនត្រូវបានគាំទ្រទេ។ យើងមិនទទួលបញ្ជូលពេជ្រ regions PH, ID, MY ទេ។`);
+          } else {
+            showResult(data);
+          }
+        } else {
+          showError(data.message || 'រកមិនឃើញ User ID។ សូមពិនិត្យម្តងទៀត។');
+        }
+      } catch (error) {
+        showError('មានបញ្ហាក្នុងការភ្ជាប់ទៅម៉ាស៊ីនមេ។ សូមព្យាយាមម្តងទៀត។');
+        console.error('API Error:', error);
+      } finally {
+        checkBtn.innerHTML = '<i class="fas fa-search"></i> Check User ID';
+        checkBtn.disabled = false;
+      }
+    }
+
+    function showResult(data) {
+      const resultDiv = document.getElementById('verificationResult');
+      const resultIcon = document.getElementById('resultIcon');
+      const userId = document.getElementById('userId').value.trim();
+      const zoneId = document.getElementById('zoneId').value.trim();
+      
+      verifiedUser = {
+        userId: userId,
+        zoneId: zoneId,
+        username: data.username,
+        region: data.region
+      };
+      
+      document.getElementById('resultUsername').textContent = data.username || '-';
+      document.getElementById('resultRegion').textContent = data.region || '-';
+      
+      resultIcon.className = 'result-icon success';
+      resultIcon.innerHTML = '<i class="fas fa-check-circle"></i>';
+      
+      resultDiv.style.display = 'block';
+      resultDiv.className = 'verification-result success';
+    }
+
+    function showError(message) {
+      const errorDiv = document.getElementById('errorMessage');
+      document.getElementById('errorText').textContent = message;
+      errorDiv.style.display = 'flex';
+    }
+
+    let selectedProduct = null;
+    let paymentTimer = null;
+    let timeLeft = 900;
+
+    function selectProduct(name, price, code) {
+      if (!verifiedUser) {
+        alert('សូមបញ្ចូល និងផ្ទៀងផ្ទាត់ User ID មុនសិន');
+        return;
+      }
+      selectedProduct = { name, price, code };
+      document.querySelectorAll('.product-card').forEach(c => c.classList.remove('selected'));
+      event.currentTarget.classList.add('selected');
+      showPaymentModal();
+    }
+
+    function showPaymentModal() {
+      document.getElementById('orderGame').textContent = GAME_NAME;
+      document.getElementById('orderUserId').textContent = verifiedUser.userId;
+      document.getElementById('orderZoneId').textContent = verifiedUser.zoneId;
+      document.getElementById('orderProduct').textContent = selectedProduct.name;
+      document.getElementById('orderTotal').textContent = '$' + selectedProduct.price.toFixed(2);
+      document.getElementById('paymentModal').classList.add('show');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closePaymentModal() {
+      document.getElementById('paymentModal').classList.remove('show');
+      document.body.style.overflow = '';
+      GamePayment.stopPaymentCheck();
+      if (paymentTimer) {
+        clearInterval(paymentTimer);
+        paymentTimer = null;
+      }
+      resetModalBody();
+    }
+
+    function resetModalBody() {
+      document.getElementById('modalBody').innerHTML = `
+        <div class="order-summary">
+          <div class="order-row">
+            <span class="order-label">Game:</span>
+            <span class="order-value" id="orderGame">${GAME_NAME}</span>
+          </div>
+          <div class="order-row">
+            <span class="order-label">User ID:</span>
+            <span class="order-value" id="orderUserId">${verifiedUser?.userId || '-'}</span>
+          </div>
+          <div class="order-row">
+            <span class="order-label">Zone ID:</span>
+            <span class="order-value" id="orderZoneId">${verifiedUser?.zoneId || '-'}</span>
+          </div>
+          <div class="order-row">
+            <span class="order-label">Product:</span>
+            <span class="order-value" id="orderProduct">${selectedProduct?.name || '-'}</span>
+          </div>
+          <div class="order-row">
+            <span class="order-label">Total:</span>
+            <span class="order-value total" id="orderTotal">$${selectedProduct?.price?.toFixed(2) || '0.00'}</span>
+          </div>
+        </div>
+        <button class="pay-now-btn" onclick="processPayment()">
+          <i class="fas fa-qrcode"></i>
+          បង្កើត QR Code
+        </button>
+      `;
+    }
+
+    async function processPayment() {
+      const btn = document.querySelector('.pay-now-btn');
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> កំពុងបង្កើត...';
+      btn.disabled = true;
+
+      try {
+        const orderInfo = {
+          game: GAME_NAME,
+          userId: verifiedUser.userId,
+          zoneId: verifiedUser.zoneId,
+          nickname: verifiedUser.username,
+          product: selectedProduct.name,
+          productCode: selectedProduct.code,
+          amount: selectedProduct.price.toFixed(2)
+        };
+
+        const transaction = await GamePayment.createPayment(selectedProduct.price, orderInfo);
+        showQRCode(transaction);
+      } catch (error) {
+        alert('មានបញ្ហាក្នុងការបង្កើត QR Code។ សូមព្យាយាមម្តងទៀត។');
+        btn.innerHTML = '<i class="fas fa-qrcode"></i> បង្កើត QR Code';
+        btn.disabled = false;
+      }
+    }
+
+    function showQRCode(transaction) {
+      timeLeft = 900;
+      document.getElementById('modalBody').innerHTML = `
+        <div class="qr-section">
+          <img src="${transaction.qrUrl}" alt="QR Code" class="qr-image" />
+          <div class="timer-section">
+            <i class="fas fa-clock"></i>
+            <span id="timerDisplay">${GamePayment.formatTime(timeLeft)}</span>
+          </div>
+          <div class="checking-status">
+            <i class="fas fa-spinner fa-spin"></i>
+            <span>កំពុងរង់ចាំការទូទាត់...</span>
+          </div>
+        </div>
+      `;
+
+      paymentTimer = setInterval(() => {
+        timeLeft--;
+        document.getElementById('timerDisplay').textContent = GamePayment.formatTime(timeLeft);
+        if (timeLeft <= 0) {
+          clearInterval(paymentTimer);
+          closePaymentModal();
+          alert('QR Code បានផុតកំណត់។ សូមព្យាយាមម្តងទៀត។');
+        }
+      }, 1000);
+
+      GamePayment.startPaymentCheck(
+        (result) => {
+          clearInterval(paymentTimer);
+          showPaymentSuccess();
+        },
+        (error) => {
+          console.error('Payment check error:', error);
+        }
+      );
+    }
+
+    function showPaymentSuccess() {
+      const orderInfo = GamePayment.currentTransaction?.orderInfo || {
+        game: GAME_NAME,
+        userId: verifiedUser?.userId || '-',
+        zoneId: verifiedUser?.zoneId || '-',
+        product: selectedProduct?.name || '-',
+        amount: selectedProduct?.price?.toFixed(2) || '0.00'
+      };
+      document.getElementById('modalBody').innerHTML = GamePayment.getSuccessPageHTML(orderInfo);
+      setTimeout(() => {
+        closePaymentModal();
+        document.querySelectorAll('.product-card').forEach(c => c.classList.remove('selected'));
+        selectedProduct = null;
+      }, 8000);
+    }
+  </script>
+</body>
+
+</html>
