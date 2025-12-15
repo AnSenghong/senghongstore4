@@ -23,7 +23,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 15px;
+  padding: 8px 10px;
   background: #2a2a3a;
   position: sticky;
   top: 0;
@@ -36,25 +36,25 @@ body {
 }
 
 .logo {
-  width: 45px;
-  height: 45px;
+  width: 35px;
+  height: 35px;
   object-fit: contain;
 }
 
 .header-right {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 6px;
 }
 
 .icon-btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
   border: none;
   background: #3a3a4a;
   color: #fff;
-  font-size: 18px;
+  font-size: 14px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -67,8 +67,8 @@ body {
 }
 
 .cambodia-flag img {
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -98,14 +98,14 @@ body {
 }
 
 .popular-section {
-  padding: 20px 15px;
+  padding: 12px 10px;
 }
 
 .section-title {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 700;
   color: #fff;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 
 .section-title i {
@@ -113,24 +113,24 @@ body {
 }
 
 .section-subtitle {
-  font-size: 13px;
+  font-size: 11px;
   color: #888;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .popular-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 6px;
 }
 
 .popular-item {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   background: linear-gradient(145deg, #3a3a4a 0%, #2d2d3d 100%);
-  border-radius: 14px;
-  padding: 12px;
+  border-radius: 10px;
+  padding: 8px;
   text-decoration: none;
   transition: transform 0.2s, box-shadow 0.2s;
   border: 1px solid rgba(255,255,255,0.05);
@@ -142,9 +142,9 @@ body {
 }
 
 .popular-img {
-  width: 52px;
-  height: 52px;
-  border-radius: 12px;
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
   object-fit: cover;
   flex-shrink: 0;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
@@ -153,13 +153,13 @@ body {
 .popular-info {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 2px;
   overflow: hidden;
   min-width: 0;
 }
 
 .popular-name {
-  font-size: 14px;
+  font-size: 11px;
   font-weight: 600;
   color: #fff;
   white-space: nowrap;
@@ -168,34 +168,34 @@ body {
 }
 
 .popular-dev {
-  font-size: 11px;
+  font-size: 9px;
   color: #9a9a9a;
 }
 
 .topup-games-section {
-  padding: 15px;
+  padding: 10px;
 }
 
 .section-header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  margin-bottom: 15px;
+  gap: 8px;
+  margin-bottom: 10px;
 }
 
 .section-title-box {
   background: #3a3a4a;
-  padding: 8px 20px;
-  border-radius: 20px;
-  font-size: 13px;
+  padding: 5px 14px;
+  border-radius: 15px;
+  font-size: 11px;
   font-weight: 600;
 }
 
 .nav-arrow {
-  width: 30px;
-  height: 30px;
-  border-radius: 6px;
+  width: 24px;
+  height: 24px;
+  border-radius: 5px;
   border: none;
   background: #3a3a4a;
   color: #fff;
@@ -204,7 +204,7 @@ body {
   align-items: center;
   justify-content: center;
   transition: background 0.3s;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .nav-arrow:hover {
@@ -214,12 +214,12 @@ body {
 .games-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+  gap: 6px;
 }
 
 .game-card {
   background: transparent;
-  border-radius: 10px;
+  border-radius: 8px;
   overflow: hidden;
   text-decoration: none;
   color: #fff;
@@ -233,7 +233,7 @@ body {
 .game-image-wrapper {
   width: 100%;
   aspect-ratio: 1;
-  border-radius: 10px;
+  border-radius: 8px;
   overflow: hidden;
   position: relative;
 }
@@ -245,12 +245,12 @@ body {
 }
 
 .game-info {
-  padding: 6px 4px;
+  padding: 4px 2px;
   text-align: center;
 }
 
 .game-info h4 {
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 600;
   margin-bottom: 2px;
   white-space: nowrap;
@@ -609,36 +609,38 @@ body {
 @media (max-width: 480px) {
   .popular-list {
     grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
   }
   
   .popular-item {
-    padding: 10px;
+    padding: 6px;
+    gap: 6px;
   }
   
   .popular-img {
-    width: 45px;
-    height: 45px;
+    width: 32px;
+    height: 32px;
   }
   
   .popular-name {
-    font-size: 12px;
+    font-size: 10px;
   }
   
   .popular-dev {
-    font-size: 10px;
+    font-size: 8px;
   }
   
   .games-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
+    gap: 5px;
   }
   
   .game-info h4 {
-    font-size: 9px;
+    font-size: 8px;
   }
   
   .game-dev {
-    font-size: 8px;
+    font-size: 7px;
   }
   
   .features-grid {
@@ -646,24 +648,24 @@ body {
   }
   
   .feature-card {
-    padding: 12px;
+    padding: 10px;
   }
   
   .features-title {
-    font-size: 16px;
+    font-size: 14px;
   }
   
   .banner-slider {
-    height: 100px;
+    height: 80px;
   }
   
   .section-title {
-    font-size: 16px;
+    font-size: 13px;
   }
   
   .logo {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
   }
 }
 
@@ -675,153 +677,153 @@ body {
   }
   
   .header {
-    padding: 12px 20px;
+    padding: 8px 15px;
   }
   
   .popular-section {
-    padding: 20px;
+    padding: 12px 15px;
   }
   
   .topup-games-section {
-    padding: 15px 20px;
+    padding: 10px 15px;
   }
   
   .popular-list {
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: 6px;
   }
   
   .popular-img {
-    width: 50px;
-    height: 50px;
+    width: 36px;
+    height: 36px;
   }
   
   .popular-name {
-    font-size: 13px;
+    font-size: 11px;
   }
   
   .games-grid {
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    gap: 6px;
   }
   
   .game-info h4 {
-    font-size: 10px;
-  }
-  
-  .game-dev {
     font-size: 9px;
   }
   
+  .game-dev {
+    font-size: 8px;
+  }
+  
   .features-section {
-    margin: 20px;
-    padding: 25px 20px;
+    margin: 15px;
+    padding: 20px 15px;
   }
   
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: 10px;
   }
   
   .banner-slider {
-    height: 130px;
+    height: 100px;
   }
   
   .banner-section {
-    padding: 12px 20px;
+    padding: 8px 15px;
   }
   
   .search-container {
-    padding: 0 20px 15px;
+    padding: 0 15px 10px;
   }
   
   .footer {
-    padding: 25px 20px;
+    padding: 20px 15px;
   }
 }
 
 /* Tablets and small desktops (769px - 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
   .page-container {
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
   }
   
   .header {
-    padding: 12px 25px;
+    padding: 8px 20px;
   }
   
   .logo {
-    width: 42px;
-    height: 42px;
+    width: 35px;
+    height: 35px;
   }
   
   .popular-section,
   .topup-games-section {
-    padding: 20px 25px;
+    padding: 12px 20px;
   }
   
   .popular-list {
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: 8px;
   }
   
   .popular-item {
-    padding: 12px;
+    padding: 8px;
   }
   
   .popular-img {
-    width: 50px;
-    height: 50px;
+    width: 38px;
+    height: 38px;
   }
   
   .popular-name {
-    font-size: 14px;
+    font-size: 11px;
   }
   
   .popular-dev {
-    font-size: 11px;
+    font-size: 9px;
   }
   
   .games-grid {
     grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
+    gap: 8px;
   }
   
   .game-info h4 {
-    font-size: 10px;
-  }
-  
-  .game-dev {
     font-size: 9px;
   }
   
+  .game-dev {
+    font-size: 8px;
+  }
+  
   .features-section {
-    margin: 20px 25px;
-    padding: 25px 20px;
+    margin: 15px 20px;
+    padding: 20px 15px;
   }
   
   .features-title {
-    font-size: 18px;
+    font-size: 16px;
   }
   
   .features-subtitle {
-    font-size: 13px;
+    font-size: 12px;
   }
   
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: 10px;
   }
   
   .feature-card {
-    padding: 12px;
+    padding: 10px;
   }
   
   .feature-icon {
-    width: 36px;
-    height: 36px;
-    font-size: 16px;
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
   }
   
   .feature-content h4 {
@@ -870,107 +872,107 @@ body {
 /* Large desktops (1025px and up) */
 @media (min-width: 1025px) {
   .page-container {
-    max-width: 1000px;
+    max-width: 800px;
     margin: 0 auto;
   }
   
   .header {
-    padding: 14px 30px;
+    padding: 10px 25px;
   }
   
   .logo {
-    width: 45px;
-    height: 45px;
+    width: 36px;
+    height: 36px;
   }
   
   .icon-btn {
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
+    width: 34px;
+    height: 34px;
+    font-size: 15px;
   }
   
   .popular-section,
   .topup-games-section {
-    padding: 25px 30px;
+    padding: 15px 25px;
   }
   
   .popular-list {
     grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
+    gap: 8px;
   }
   
   .popular-item {
-    padding: 14px;
-    border-radius: 14px;
+    padding: 10px;
+    border-radius: 10px;
   }
   
   .popular-img {
-    width: 55px;
-    height: 55px;
-    border-radius: 12px;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
   }
   
   .popular-name {
-    font-size: 15px;
+    font-size: 12px;
   }
   
   .popular-dev {
-    font-size: 12px;
+    font-size: 10px;
   }
   
   .games-grid {
     grid-template-columns: repeat(6, 1fr);
-    gap: 12px;
+    gap: 8px;
   }
   
   .game-image-wrapper {
-    border-radius: 10px;
+    border-radius: 8px;
   }
   
   .game-info {
-    padding: 6px 4px;
+    padding: 4px 2px;
   }
   
   .game-info h4 {
-    font-size: 11px;
+    font-size: 10px;
   }
   
   .game-dev {
-    font-size: 9px;
+    font-size: 8px;
   }
   
   .features-section {
-    margin: 25px 30px;
-    padding: 30px 25px;
-    border-radius: 20px;
+    margin: 20px 25px;
+    padding: 20px;
+    border-radius: 16px;
   }
   
   .features-title {
-    font-size: 20px;
+    font-size: 16px;
   }
   
   .features-subtitle {
-    font-size: 14px;
+    font-size: 12px;
   }
   
   .features-grid {
     grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
+    gap: 12px;
   }
   
   .feature-card {
-    padding: 15px;
-    border-radius: 12px;
+    padding: 12px;
+    border-radius: 10px;
     flex-direction: column;
     text-align: center;
     align-items: center;
   }
   
   .feature-icon {
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-    margin-bottom: 8px;
+    width: 34px;
+    height: 34px;
+    font-size: 15px;
+    margin-bottom: 6px;
   }
   
   .feature-content {
@@ -978,7 +980,7 @@ body {
   }
   
   .feature-content h4 {
-    font-size: 13px;
+    font-size: 12px;
   }
   
   .feature-content p {
