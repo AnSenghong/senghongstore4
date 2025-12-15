@@ -23,7 +23,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 10px;
+  padding: 10px 12px;
   background: #2a2a3a;
   position: sticky;
   top: 0;
@@ -36,25 +36,25 @@ body {
 }
 
 .logo {
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   object-fit: contain;
 }
 
 .header-right {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
 }
 
 .icon-btn {
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   border-radius: 8px;
   border: none;
   background: #3a3a4a;
   color: #fff;
-  font-size: 14px;
+  font-size: 16px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -67,8 +67,8 @@ body {
 }
 
 .cambodia-flag img {
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -98,14 +98,14 @@ body {
 }
 
 .popular-section {
-  padding: 12px 10px;
+  padding: 15px 12px;
 }
 
 .section-title {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   color: #fff;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 }
 
 .section-title i {
@@ -113,24 +113,24 @@ body {
 }
 
 .section-subtitle {
-  font-size: 11px;
+  font-size: 12px;
   color: #888;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .popular-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 6px;
+  gap: 8px;
 }
 
 .popular-item {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   background: linear-gradient(145deg, #3a3a4a 0%, #2d2d3d 100%);
-  border-radius: 10px;
-  padding: 8px;
+  border-radius: 12px;
+  padding: 10px;
   text-decoration: none;
   transition: transform 0.2s, box-shadow 0.2s;
   border: 1px solid rgba(255,255,255,0.05);
@@ -142,9 +142,9 @@ body {
 }
 
 .popular-img {
-  width: 38px;
-  height: 38px;
-  border-radius: 8px;
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
   object-fit: cover;
   flex-shrink: 0;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
@@ -159,7 +159,7 @@ body {
 }
 
 .popular-name {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 600;
   color: #fff;
   white-space: nowrap;
@@ -168,34 +168,34 @@ body {
 }
 
 .popular-dev {
-  font-size: 9px;
+  font-size: 10px;
   color: #9a9a9a;
 }
 
 .topup-games-section {
-  padding: 10px;
+  padding: 12px;
 }
 
 .section-header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  margin-bottom: 10px;
+  gap: 10px;
+  margin-bottom: 12px;
 }
 
 .section-title-box {
   background: #3a3a4a;
-  padding: 5px 14px;
-  border-radius: 15px;
-  font-size: 11px;
+  padding: 6px 16px;
+  border-radius: 18px;
+  font-size: 12px;
   font-weight: 600;
 }
 
 .nav-arrow {
-  width: 24px;
-  height: 24px;
-  border-radius: 5px;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
   border: none;
   background: #3a3a4a;
   color: #fff;
@@ -204,7 +204,7 @@ body {
   align-items: center;
   justify-content: center;
   transition: background 0.3s;
-  font-size: 10px;
+  font-size: 11px;
 }
 
 .nav-arrow:hover {
@@ -214,12 +214,12 @@ body {
 .games-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 6px;
+  gap: 8px;
 }
 
 .game-card {
   background: transparent;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
   text-decoration: none;
   color: #fff;
@@ -233,7 +233,7 @@ body {
 .game-image-wrapper {
   width: 100%;
   aspect-ratio: 1;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
   position: relative;
 }
@@ -245,12 +245,12 @@ body {
 }
 
 .game-info {
-  padding: 4px 2px;
+  padding: 5px 3px;
   text-align: center;
 }
 
 .game-info h4 {
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 600;
   margin-bottom: 2px;
   white-space: nowrap;
@@ -609,38 +609,38 @@ body {
 @media (max-width: 480px) {
   .popular-list {
     grid-template-columns: repeat(2, 1fr);
-    gap: 5px;
-  }
-  
-  .popular-item {
-    padding: 6px;
     gap: 6px;
   }
   
+  .popular-item {
+    padding: 8px;
+    gap: 8px;
+  }
+  
   .popular-img {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
   }
   
   .popular-name {
-    font-size: 10px;
+    font-size: 12px;
   }
   
   .popular-dev {
-    font-size: 8px;
+    font-size: 9px;
   }
   
   .games-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
+    gap: 6px;
   }
   
   .game-info h4 {
-    font-size: 8px;
+    font-size: 9px;
   }
   
   .game-dev {
-    font-size: 7px;
+    font-size: 8px;
   }
   
   .features-grid {
@@ -648,24 +648,24 @@ body {
   }
   
   .feature-card {
-    padding: 10px;
+    padding: 12px;
   }
   
   .features-title {
-    font-size: 14px;
+    font-size: 15px;
   }
   
   .banner-slider {
-    height: 80px;
+    height: 90px;
   }
   
   .section-title {
-    font-size: 13px;
+    font-size: 15px;
   }
   
   .logo {
-    width: 30px;
-    height: 30px;
+    width: 36px;
+    height: 36px;
   }
 }
 
@@ -677,38 +677,38 @@ body {
   }
   
   .header {
-    padding: 8px 15px;
+    padding: 10px 18px;
   }
   
   .popular-section {
-    padding: 12px 15px;
+    padding: 15px 18px;
   }
   
   .topup-games-section {
-    padding: 10px 15px;
+    padding: 12px 18px;
   }
   
   .popular-list {
     grid-template-columns: repeat(2, 1fr);
-    gap: 6px;
+    gap: 8px;
   }
   
   .popular-img {
-    width: 36px;
-    height: 36px;
+    width: 44px;
+    height: 44px;
   }
   
   .popular-name {
-    font-size: 11px;
+    font-size: 12px;
   }
   
   .games-grid {
     grid-template-columns: repeat(4, 1fr);
-    gap: 6px;
+    gap: 8px;
   }
   
   .game-info h4 {
-    font-size: 9px;
+    font-size: 10px;
   }
   
   .game-dev {
@@ -716,8 +716,8 @@ body {
   }
   
   .features-section {
-    margin: 15px;
-    padding: 20px 15px;
+    margin: 18px;
+    padding: 22px 18px;
   }
   
   .features-grid {
@@ -726,72 +726,72 @@ body {
   }
   
   .banner-slider {
-    height: 100px;
+    height: 110px;
   }
   
   .banner-section {
-    padding: 8px 15px;
+    padding: 10px 18px;
   }
   
   .search-container {
-    padding: 0 15px 10px;
+    padding: 0 18px 12px;
   }
   
   .footer {
-    padding: 20px 15px;
+    padding: 22px 18px;
   }
 }
 
 /* Tablets and small desktops (769px - 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
   .page-container {
-    max-width: 700px;
+    max-width: 750px;
     margin: 0 auto;
   }
   
   .header {
-    padding: 8px 20px;
+    padding: 10px 22px;
   }
   
   .logo {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
   }
   
   .popular-section,
   .topup-games-section {
-    padding: 12px 20px;
+    padding: 15px 22px;
   }
   
   .popular-list {
     grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
+    gap: 10px;
   }
   
   .popular-item {
-    padding: 8px;
+    padding: 10px;
   }
   
   .popular-img {
-    width: 38px;
-    height: 38px;
+    width: 46px;
+    height: 46px;
   }
   
   .popular-name {
-    font-size: 11px;
+    font-size: 13px;
   }
   
   .popular-dev {
-    font-size: 9px;
+    font-size: 10px;
   }
   
   .games-grid {
     grid-template-columns: repeat(5, 1fr);
-    gap: 8px;
+    gap: 10px;
   }
   
   .game-info h4 {
-    font-size: 9px;
+    font-size: 10px;
   }
   
   .game-dev {
@@ -799,12 +799,12 @@ body {
   }
   
   .features-section {
-    margin: 15px 20px;
-    padding: 20px 15px;
+    margin: 18px 22px;
+    padding: 22px 18px;
   }
   
   .features-title {
-    font-size: 16px;
+    font-size: 17px;
   }
   
   .features-subtitle {
@@ -813,17 +813,17 @@ body {
   
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 12px;
   }
   
   .feature-card {
-    padding: 10px;
+    padding: 12px;
   }
   
   .feature-icon {
-    width: 32px;
-    height: 32px;
-    font-size: 14px;
+    width: 34px;
+    height: 34px;
+    font-size: 15px;
   }
   
   .feature-content h4 {
@@ -872,107 +872,107 @@ body {
 /* Large desktops (1025px and up) */
 @media (min-width: 1025px) {
   .page-container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
   }
   
   .header {
-    padding: 10px 25px;
+    padding: 12px 28px;
   }
   
   .logo {
-    width: 36px;
-    height: 36px;
+    width: 42px;
+    height: 42px;
   }
   
   .icon-btn {
-    width: 34px;
-    height: 34px;
-    font-size: 15px;
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
   }
   
   .popular-section,
   .topup-games-section {
-    padding: 15px 25px;
+    padding: 18px 28px;
   }
   
   .popular-list {
     grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
+    gap: 12px;
   }
   
   .popular-item {
-    padding: 10px;
-    border-radius: 10px;
+    padding: 12px;
+    border-radius: 12px;
   }
   
   .popular-img {
-    width: 42px;
-    height: 42px;
+    width: 50px;
+    height: 50px;
     border-radius: 10px;
   }
   
   .popular-name {
-    font-size: 12px;
+    font-size: 14px;
   }
   
   .popular-dev {
-    font-size: 10px;
+    font-size: 11px;
   }
   
   .games-grid {
     grid-template-columns: repeat(6, 1fr);
-    gap: 8px;
+    gap: 10px;
   }
   
   .game-image-wrapper {
-    border-radius: 8px;
+    border-radius: 10px;
   }
   
   .game-info {
-    padding: 4px 2px;
+    padding: 5px 3px;
   }
   
   .game-info h4 {
-    font-size: 10px;
+    font-size: 11px;
   }
   
   .game-dev {
-    font-size: 8px;
+    font-size: 9px;
   }
   
   .features-section {
-    margin: 20px 25px;
-    padding: 20px;
-    border-radius: 16px;
+    margin: 22px 28px;
+    padding: 25px;
+    border-radius: 18px;
   }
   
   .features-title {
-    font-size: 16px;
+    font-size: 18px;
   }
   
   .features-subtitle {
-    font-size: 12px;
+    font-size: 13px;
   }
   
   .features-grid {
     grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
+    gap: 14px;
   }
   
   .feature-card {
-    padding: 12px;
-    border-radius: 10px;
+    padding: 14px;
+    border-radius: 12px;
     flex-direction: column;
     text-align: center;
     align-items: center;
   }
   
   .feature-icon {
-    width: 34px;
-    height: 34px;
-    font-size: 15px;
-    margin-bottom: 6px;
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+    margin-bottom: 8px;
   }
   
   .feature-content {
@@ -980,7 +980,7 @@ body {
   }
   
   .feature-content h4 {
-    font-size: 12px;
+    font-size: 13px;
   }
   
   .feature-content p {
