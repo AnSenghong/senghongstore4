@@ -708,40 +708,175 @@ body {
 /* Tablets and small desktops (769px - 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
   .page-container {
-    max-width: 900px;
+    max-width: 800px;
     margin: 0 auto;
   }
   
   .header {
-    padding: 18px 30px;
+    padding: 12px 25px;
   }
   
   .logo {
-    width: 50px;
-    height: 50px;
+    width: 42px;
+    height: 42px;
   }
   
   .popular-section,
   .topup-games-section {
-    padding: 30px;
+    padding: 20px 25px;
   }
   
   .popular-list {
     grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
+    gap: 12px;
   }
   
   .popular-item {
-    padding: 15px;
+    padding: 10px;
   }
   
   .popular-img {
-    width: 60px;
-    height: 60px;
+    width: 48px;
+    height: 48px;
   }
   
   .popular-name {
-    font-size: 15px;
+    font-size: 13px;
+  }
+  
+  .popular-dev {
+    font-size: 11px;
+  }
+  
+  .games-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  
+  .game-info h4 {
+    font-size: 12px;
+  }
+  
+  .game-dev {
+    font-size: 10px;
+  }
+  
+  .features-section {
+    margin: 20px 25px;
+    padding: 25px 20px;
+  }
+  
+  .features-title {
+    font-size: 18px;
+  }
+  
+  .features-subtitle {
+    font-size: 13px;
+  }
+  
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  
+  .feature-card {
+    padding: 12px;
+  }
+  
+  .feature-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+  
+  .feature-content h4 {
+    font-size: 13px;
+  }
+  
+  .feature-content p {
+    font-size: 11px;
+  }
+  
+  .banner-slider {
+    height: 140px;
+  }
+  
+  .banner-section {
+    padding: 15px 25px;
+  }
+  
+  .section-title {
+    font-size: 17px;
+  }
+  
+  .section-subtitle {
+    font-size: 12px;
+  }
+  
+  .search-container {
+    padding: 0 25px 15px;
+  }
+  
+  .search-input {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+  
+  .footer {
+    padding: 25px;
+  }
+  
+  .mascot {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+/* Large desktops (1025px and up) */
+@media (min-width: 1025px) {
+  .page-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .header {
+    padding: 14px 30px;
+  }
+  
+  .logo {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .icon-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+  
+  .popular-section,
+  .topup-games-section {
+    padding: 25px 30px;
+  }
+  
+  .popular-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+  
+  .popular-item {
+    padding: 12px;
+    border-radius: 12px;
+  }
+  
+  .popular-img {
+    width: 52px;
+    height: 52px;
+    border-radius: 10px;
+  }
+  
+  .popular-name {
+    font-size: 14px;
   }
   
   .popular-dev {
@@ -749,12 +884,20 @@ body {
   }
   
   .games-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+  }
+  
+  .game-image-wrapper {
+    border-radius: 14px;
+  }
+  
+  .game-info {
+    padding: 8px 5px;
   }
   
   .game-info h4 {
-    font-size: 14px;
+    font-size: 13px;
   }
   
   .game-dev {
@@ -762,180 +905,37 @@ body {
   }
   
   .features-section {
-    margin: 30px;
-    padding: 40px 35px;
+    margin: 25px 30px;
+    padding: 30px 25px;
+    border-radius: 20px;
   }
   
   .features-title {
-    font-size: 22px;
+    font-size: 20px;
   }
   
   .features-subtitle {
-    font-size: 15px;
-  }
-  
-  .features-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
-  }
-  
-  .feature-card {
-    padding: 20px;
-  }
-  
-  .feature-icon {
-    width: 45px;
-    height: 45px;
-    font-size: 20px;
-  }
-  
-  .feature-content h4 {
-    font-size: 15px;
-  }
-  
-  .feature-content p {
-    font-size: 12px;
-  }
-  
-  .banner-slider {
-    height: 180px;
-  }
-  
-  .banner-section {
-    padding: 20px 30px;
-  }
-  
-  .section-title {
-    font-size: 20px;
-  }
-  
-  .section-subtitle {
     font-size: 14px;
-  }
-  
-  .search-container {
-    padding: 0 30px 20px;
-  }
-  
-  .search-input {
-    padding: 14px 18px;
-    font-size: 15px;
-  }
-  
-  .footer {
-    padding: 35px 30px;
-  }
-  
-  .mascot {
-    width: 120px;
-    height: 120px;
-  }
-}
-
-/* Large desktops (1025px and up) */
-@media (min-width: 1025px) {
-  .page-container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .header {
-    padding: 20px 40px;
-  }
-  
-  .logo {
-    width: 55px;
-    height: 55px;
-  }
-  
-  .icon-btn {
-    width: 45px;
-    height: 45px;
-    font-size: 20px;
-  }
-  
-  .popular-section,
-  .topup-games-section {
-    padding: 40px;
-  }
-  
-  .popular-list {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-  
-  .popular-item {
-    padding: 18px;
-    border-radius: 15px;
-  }
-  
-  .popular-img {
-    width: 70px;
-    height: 70px;
-    border-radius: 12px;
-  }
-  
-  .popular-name {
-    font-size: 16px;
-  }
-  
-  .popular-dev {
-    font-size: 13px;
-  }
-  
-  .games-grid {
-    grid-template-columns: repeat(6, 1fr);
-    gap: 25px;
-  }
-  
-  .game-image-wrapper {
-    border-radius: 18px;
-  }
-  
-  .game-info {
-    padding: 12px 8px;
-  }
-  
-  .game-info h4 {
-    font-size: 15px;
-  }
-  
-  .game-dev {
-    font-size: 12px;
-  }
-  
-  .features-section {
-    margin: 40px;
-    padding: 50px 45px;
-    border-radius: 25px;
-  }
-  
-  .features-title {
-    font-size: 26px;
-  }
-  
-  .features-subtitle {
-    font-size: 16px;
   }
   
   .features-grid {
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 15px;
   }
   
   .feature-card {
-    padding: 22px;
-    border-radius: 15px;
+    padding: 15px;
+    border-radius: 12px;
     flex-direction: column;
     text-align: center;
     align-items: center;
   }
   
   .feature-icon {
-    width: 50px;
-    height: 50px;
-    font-size: 22px;
-    margin-bottom: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    margin-bottom: 8px;
   }
   
   .feature-content {
@@ -943,114 +943,114 @@ body {
   }
   
   .feature-content h4 {
-    font-size: 16px;
+    font-size: 13px;
   }
   
   .feature-content p {
-    font-size: 13px;
+    font-size: 11px;
   }
   
   .banner-slider {
-    height: 220px;
-    border-radius: 20px;
+    height: 160px;
+    border-radius: 16px;
   }
   
   .banner-section {
-    padding: 25px 40px;
+    padding: 18px 30px;
   }
   
   .section-title {
-    font-size: 24px;
+    font-size: 19px;
   }
   
   .section-subtitle {
-    font-size: 15px;
+    font-size: 13px;
   }
   
   .section-header {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   
   .section-title-box {
-    padding: 12px 30px;
-    font-size: 16px;
-  }
-  
-  .nav-arrow {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .search-container {
-    padding: 0 40px 25px;
-  }
-  
-  .search-input {
-    padding: 16px 20px;
-    font-size: 16px;
-    border-radius: 12px;
-  }
-  
-  .footer {
-    padding: 45px 40px;
-  }
-  
-  .contact-label {
-    font-size: 16px;
-  }
-  
-  .contact-btn {
-    width: 45px;
-    height: 45px;
-    font-size: 22px;
-  }
-  
-  .footer-links a {
+    padding: 10px 22px;
     font-size: 14px;
   }
   
+  .nav-arrow {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .search-container {
+    padding: 0 30px 18px;
+  }
+  
+  .search-input {
+    padding: 13px 16px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+  
+  .footer {
+    padding: 30px;
+  }
+  
+  .contact-label {
+    font-size: 14px;
+  }
+  
+  .contact-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  
+  .footer-links a {
+    font-size: 13px;
+  }
+  
   .copyright {
-    font-size: 13px;
-  }
-  
-  .payment-methods span:first-child {
-    font-size: 13px;
-  }
-  
-  .payment-badge {
-    padding: 6px 14px;
     font-size: 12px;
   }
   
+  .payment-methods span:first-child {
+    font-size: 12px;
+  }
+  
+  .payment-badge {
+    padding: 5px 12px;
+    font-size: 11px;
+  }
+  
   .mascot {
-    width: 140px;
-    height: 140px;
-    padding: 10px;
+    width: 100px;
+    height: 100px;
+    padding: 8px;
   }
   
   .side-menu {
-    width: 320px;
-    right: -320px;
+    width: 300px;
+    right: -300px;
   }
 }
 
 /* Extra large screens (1440px and up) */
 @media (min-width: 1440px) {
   .page-container {
-    max-width: 1400px;
+    max-width: 1100px;
   }
   
   .popular-list {
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    gap: 18px;
   }
   
   .games-grid {
     grid-template-columns: repeat(6, 1fr);
-    gap: 30px;
+    gap: 18px;
   }
   
   .banner-slider {
-    height: 280px;
+    height: 180px;
   }
 }

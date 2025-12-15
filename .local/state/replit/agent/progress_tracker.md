@@ -9,3 +9,4 @@
 [x] 9. Added features section explaining store benefits
 [x] 10. Updated mlbb.html header with Senghong Store branding and back link to homepage
 [x] 11. Made website fully responsive for all screen sizes (mobile, tablet, desktop)
+[x] 12. Reduced sizes for faster loading and better usability - more compact design

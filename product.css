@@ -1200,47 +1200,178 @@ body {
 /* Tablets and small desktops (769px - 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
   .page-container {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+  
+  .header {
+    padding: 12px 25px;
+  }
+  
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .main-content {
+    padding: 20px;
+  }
+  
+  .product-banner {
+    height: 160px;
+  }
+  
+  .banner-title {
+    font-size: 26px;
+  }
+  
+  .banner-overlay {
+    padding: 20px;
+  }
+  
+  .game-info-card {
+    padding: 20px;
+    gap: 18px;
+  }
+  
+  .game-icon {
+    width: 75px;
+    height: 75px;
+  }
+  
+  .game-name {
+    font-size: 18px;
+  }
+  
+  .game-features {
+    gap: 6px;
+  }
+  
+  .feature-item {
+    font-size: 12px;
+  }
+  
+  .game-description {
+    padding: 20px;
+  }
+  
+  .game-description p {
+    font-size: 13px;
+  }
+  
+  .verification-section,
+  .products-section {
+    padding: 20px;
+  }
+  
+  .section-header-box h3 {
+    font-size: 16px;
+  }
+  
+  .form-input {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+  
+  .check-btn {
+    padding: 13px;
+    font-size: 14px;
+  }
+  
+  .products-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  
+  .product-card .product-image {
+    height: 75px;
+  }
+  
+  .product-card .product-image img {
+    height: 55px;
+  }
+  
+  .product-info {
+    padding: 10px;
+  }
+  
+  .product-name {
+    font-size: 13px;
+  }
+  
+  .product-price {
+    font-size: 14px;
+  }
+  
+  .category-title {
+    font-size: 16px;
+    margin: 18px 0 12px 0;
+  }
+  
+  .footer {
+    padding: 25px;
+  }
+  
+  .side-menu {
+    width: 280px;
+    right: -280px;
+  }
+}
+
+/* Large desktops (1025px and up) */
+@media (min-width: 1025px) {
+  .page-container {
     max-width: 900px;
     margin: 0 auto;
   }
   
   .header {
-    padding: 18px 30px;
+    padding: 14px 30px;
   }
   
   .logo {
-    width: 45px;
-    height: 45px;
+    width: 42px;
+    height: 42px;
+  }
+  
+  .back-btn,
+  .icon-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
   }
   
   .main-content {
-    padding: 30px;
+    padding: 25px;
   }
   
   .product-banner {
-    height: 220px;
+    height: 180px;
   }
   
   .banner-title {
-    font-size: 32px;
+    font-size: 28px;
   }
   
   .banner-overlay {
-    padding: 30px;
+    padding: 25px;
   }
   
   .game-info-card {
-    padding: 30px;
-    gap: 25px;
+    padding: 22px;
+    gap: 20px;
+    border-radius: 15px;
   }
   
   .game-icon {
-    width: 100px;
-    height: 100px;
+    width: 85px;
+    height: 85px;
+    border-radius: 15px;
   }
   
   .game-name {
-    font-size: 22px;
+    font-size: 20px;
+    margin-bottom: 12px;
   }
   
   .game-features {
@@ -1248,285 +1379,154 @@ body {
   }
   
   .feature-item {
+    font-size: 13px;
+    gap: 8px;
+  }
+  
+  .feature-item i {
     font-size: 14px;
   }
   
   .game-description {
-    padding: 30px;
+    padding: 22px;
+    border-radius: 15px;
   }
   
   .game-description p {
-    font-size: 15px;
+    font-size: 14px;
+    line-height: 1.6;
   }
   
   .verification-section,
   .products-section {
-    padding: 30px;
+    padding: 22px;
+    border-radius: 15px;
+  }
+  
+  .section-header-box {
+    margin-bottom: 18px;
+  }
+  
+  .step-number {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
   }
   
   .section-header-box h3 {
-    font-size: 18px;
+    font-size: 17px;
+  }
+  
+  .form-group label {
+    font-size: 14px;
+    margin-bottom: 8px;
   }
   
   .form-input {
-    padding: 16px 18px;
-    font-size: 15px;
+    padding: 13px 15px;
+    font-size: 14px;
+    border-radius: 10px;
   }
   
   .check-btn {
-    padding: 16px;
-    font-size: 16px;
+    padding: 14px;
+    font-size: 15px;
+    border-radius: 10px;
   }
   
   .products-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+  }
+  
+  .product-card {
+    border-radius: 12px;
   }
   
   .product-card .product-image {
-    height: 100px;
+    height: 80px;
+    padding: 10px;
   }
   
   .product-card .product-image img {
-    height: 75px;
+    height: 60px;
   }
   
   .product-info {
-    padding: 14px;
+    padding: 10px;
   }
   
   .product-name {
-    font-size: 15px;
+    font-size: 13px;
+    margin-bottom: 4px;
   }
   
   .product-price {
-    font-size: 16px;
+    font-size: 14px;
   }
   
   .category-title {
-    font-size: 18px;
-    margin: 25px 0 15px 0;
+    font-size: 17px;
+    margin: 22px 0 14px 0;
+  }
+  
+  .section-subtitle {
+    font-size: 14px;
   }
   
   .footer {
-    padding: 35px 30px;
+    padding: 30px;
+  }
+  
+  .contact-label {
+    font-size: 14px;
+  }
+  
+  .contact-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  
+  .footer-links a {
+    font-size: 13px;
+  }
+  
+  .copyright {
+    font-size: 12px;
   }
   
   .side-menu {
     width: 300px;
     right: -300px;
   }
-}
-
-/* Large desktops (1025px and up) */
-@media (min-width: 1025px) {
-  .page-container {
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  
-  .header {
-    padding: 20px 40px;
-  }
-  
-  .logo {
-    width: 50px;
-    height: 50px;
-  }
-  
-  .back-btn,
-  .icon-btn {
-    width: 45px;
-    height: 45px;
-    font-size: 20px;
-  }
-  
-  .main-content {
-    padding: 40px;
-  }
-  
-  .product-banner {
-    height: 280px;
-  }
-  
-  .banner-title {
-    font-size: 38px;
-  }
-  
-  .banner-overlay {
-    padding: 40px;
-  }
-  
-  .game-info-card {
-    padding: 35px;
-    gap: 30px;
-    border-radius: 20px;
-  }
-  
-  .game-icon {
-    width: 120px;
-    height: 120px;
-    border-radius: 20px;
-  }
-  
-  .game-name {
-    font-size: 26px;
-    margin-bottom: 15px;
-  }
-  
-  .game-features {
-    gap: 10px;
-  }
-  
-  .feature-item {
-    font-size: 15px;
-    gap: 10px;
-  }
-  
-  .feature-item i {
-    font-size: 16px;
-  }
-  
-  .game-description {
-    padding: 35px;
-    border-radius: 20px;
-  }
-  
-  .game-description p {
-    font-size: 16px;
-    line-height: 1.7;
-  }
-  
-  .verification-section,
-  .products-section {
-    padding: 35px;
-    border-radius: 20px;
-  }
-  
-  .section-header-box {
-    margin-bottom: 25px;
-  }
-  
-  .step-number {
-    width: 32px;
-    height: 32px;
-    font-size: 16px;
-  }
-  
-  .section-header-box h3 {
-    font-size: 20px;
-  }
-  
-  .form-group label {
-    font-size: 15px;
-    margin-bottom: 10px;
-  }
-  
-  .form-input {
-    padding: 18px 20px;
-    font-size: 16px;
-    border-radius: 12px;
-  }
-  
-  .check-btn {
-    padding: 18px;
-    font-size: 17px;
-    border-radius: 12px;
-  }
-  
-  .products-grid {
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-  }
-  
-  .product-card {
-    border-radius: 15px;
-  }
-  
-  .product-card .product-image {
-    height: 110px;
-    padding: 15px;
-  }
-  
-  .product-card .product-image img {
-    height: 80px;
-  }
-  
-  .product-info {
-    padding: 15px;
-  }
-  
-  .product-name {
-    font-size: 16px;
-    margin-bottom: 6px;
-  }
-  
-  .product-price {
-    font-size: 17px;
-  }
-  
-  .category-title {
-    font-size: 20px;
-    margin: 30px 0 18px 0;
-  }
-  
-  .section-subtitle {
-    font-size: 15px;
-  }
-  
-  .footer {
-    padding: 45px 40px;
-  }
-  
-  .contact-label {
-    font-size: 16px;
-  }
-  
-  .contact-btn {
-    width: 45px;
-    height: 45px;
-    font-size: 22px;
-  }
-  
-  .footer-links a {
-    font-size: 14px;
-  }
-  
-  .copyright {
-    font-size: 13px;
-  }
-  
-  .side-menu {
-    width: 320px;
-    right: -320px;
-  }
   
   .payment-modal-content {
-    max-width: 450px;
+    max-width: 420px;
   }
   
   .qr-image {
-    width: 250px;
-    height: 250px;
+    width: 220px;
+    height: 220px;
   }
 }
 
 /* Extra large screens (1440px and up) */
 @media (min-width: 1440px) {
   .page-container {
-    max-width: 1300px;
+    max-width: 1000px;
   }
   
   .products-grid {
     grid-template-columns: repeat(6, 1fr);
-    gap: 25px;
+    gap: 16px;
   }
   
   .product-banner {
-    height: 320px;
+    height: 200px;
   }
   
   .banner-title {
-    font-size: 42px;
+    font-size: 32px;
   }
 }
